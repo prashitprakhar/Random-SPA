@@ -1,0 +1,18 @@
+<form action="/action_page.php">
+  First name: &nbsp;
+  <input type="text" name="firstname" value="Mickey" [(ngModel)]="firstName">
+  <br>
+  Last name: &nbsp;
+  <input type="text" name="lastname" value="Mouse" [(ngModel)]="lastName">
+  <br><br>
+  <div class="form-group">
+      <label for="file">Choose File</label>
+      <input type="file"
+             id="upload"
+             (change)="handleFileInput($event.target.files)"
+             name="upload"
+             >
+  </div>
+  <br> <br>
+  <button (click)="uploadData()">Upload Data</button>
+</form> 
